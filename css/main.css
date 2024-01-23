@@ -1,0 +1,393 @@
+/* = VARIABLES = */
+
+:root{
+    --main-color: #040014;
+    --main-color-50: #040014a1;
+    --light-color: #FFF9F5;
+    --secondary-color: #FC9DBD;
+    --secondary-dark-color: #f190b0;
+    --terciary-color: #5DB1C0;
+    --quaternary-color: #CC0018;
+    --wp-color: #25D366;
+    --wp-color-dark: #1fae54;
+}
+
+/* = CLASSES = */
+
+.text{
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    width: 95%;
+}
+
+.divider{
+    height: 2px;
+    width: 100%;
+    background: linear-gradient(to right, var(--secondary-color) 0%, var(--terciary-color) 100%);
+}
+
+.section1{
+    background-color: var(--light-color);
+    height: calc(100% - 3.50rem);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.section2{
+    background-color: var(--main-color);
+    height: calc(100% - 3.50rem);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+/* = CARD = */
+
+.card{
+    position: relative;
+    background: linear-gradient(145deg, var(--secondary-color), var(--terciary-color));
+    border-radius: 2rem;
+    height: 40%;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.card::before{
+    position: absolute;
+    content: '';
+    height: 98%;
+    width: 98%;
+    background-color: var(--main-color);
+    border-radius: 2rem;
+    left: 1%;
+    right: 0;
+    bottom: 0;
+    top: 1%;
+    z-index: 1;
+}
+
+/* = HTML = */
+
+html{
+    scroll-behavior: smooth;
+}
+
+/* = BODY = */
+
+body{
+    position: relative;
+    font-family: 'Poppins', sans-serif;
+    width: 100vw;
+    height: 100vh;
+}
+
+/* = HEADER = */
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem 1rem 2rem;
+    z-index: 10;
+    background-color: var(--main-color);
+}
+
+header a{
+    color: var(--secondary-color);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+header button{
+    background-color: transparent;
+    cursor: pointer;
+}
+
+#btnCloseMenu{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 1.25rem;
+    width: 2rem;
+}
+
+/* = MENU = */
+
+.closed{
+    display: none;
+}
+
+#btnCloseMenu.closed{
+    display: none;
+}
+
+#btnCloseMenu #x{
+    z-index: 10;
+    margin-top: 0.6rem;
+}
+
+#btnCloseMenu nav{
+    width: 60%;
+    height: 100%;
+    position: fixed;
+    right: 0;
+    top: 0;
+    background-color: var(--main-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    z-index: 9;
+}
+
+#btnCloseMenu nav .list{
+    height: 40%;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#btnCloseMenu nav .list a{
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.5rem;
+    text-align: left;
+    position: relative;
+    z-index: 10;
+}
+
+#btnCloseMenu nav .list a::after:hover{
+    content: '';
+    position: absolute;
+    width: 80%;
+    background-color: var(--secondary-color);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+}
+
+#btnCloseMenu::before{
+    content: '';
+    width: 40%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: var(--main-color-50);
+}
+
+/* = PRESENTATION = */
+
+#presentation{
+    background-color: var(--light-color);
+    width: 100%;
+    height: calc(100% - 3.50rem);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3.50rem;
+}
+
+#div-img-perfil{
+    height: 18.75rem;
+    width: 18.75rem;
+    border-radius: 50%;
+    border: solid 4px var(--secondary-color); 
+    margin-bottom: 3rem;
+}
+
+#div-img-perfil img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-position: top;
+    object-fit: cover;
+}
+
+#presentation p{
+    color: var(--main-color);
+    width: 90%;
+    margin-bottom: 8rem;
+}
+
+#presentation p b{
+    color: var(--secondary-color);
+}
+
+/* = ABOUT ME */
+
+#aboutme .text{
+    color: var(--light-color);
+}
+
+#aboutme .text:last-of-type{
+    margin-top: 4rem;
+}
+
+#aboutme .text b{
+    color: var(--terciary-color);
+}
+
+#aboutme .table{
+    margin-top: 3rem;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#aboutme .table span{
+    width: 95%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid var(--terciary-color);
+    border-radius: 2rem;
+}
+
+#aboutme .table span .text{
+    color: var(--light-color);
+    font-size: 1.5rem;
+    text-align: left;
+    margin: 0;
+    padding: 1rem;
+    letter-spacing: 0.6rem;
+}
+
+/* = ABOUT = */
+
+#aboutpublic{
+    background-color: var(--main-color);
+    height: calc(100% - 3.50rem);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#aboutpublic p{
+    color: var(--light-color);
+}
+
+#aboutpublic p b{
+    color: var(--secondary-color);
+}
+
+#aboutpublic div p{
+    color: var(--light-color);
+    font-size: 1.5rem;
+}
+
+#aboutpublic div p b{
+    color: var(--terciary-color);
+}
+
+#aboutpublic .table{
+    width: 80%;
+    height: 70%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+#aboutpublic .table .card p{
+    z-index: 2;
+    width: 80%;
+}
+
+#aboutpublic .table .card img{
+    height: 1.5rem;
+    z-index: 2;
+    margin-top: 1rem;
+}
+
+/* = CONTACTS = */
+
+#contacts{
+    width: 100%;
+    height: calc(100% - 3.50rem);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--main-color);
+}
+
+#contacts p{
+    color: var(--light-color);
+    width: 90%;
+}
+
+#contacts p b{
+    color: var(--secondary-color);
+}
+
+#contacts p #bWpp{
+    color: var(--wp-color);
+}
+
+#contacts #box-setas{
+    height: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    margin: 6rem 0 3rem 0;
+}
+
+#contacts a{
+    font-size: 2rem;
+    padding: 1rem 3rem;
+    border-radius: 1rem;
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--light-color);
+    cursor: pointer;
+    background-color: var(--wp-color);
+    transition: .3s;
+    margin-top: 3rem;
+}
+
+#contacts a:hover{
+    background-color: var(--wp-color-dark);
+}
+
+/* = FOOTER = */
+
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 12rem;
+    background-color: var(--main-color);
+}
+
+footer p{
+    text-align: center;
+    color: var(--light-color);
+}
+
+footer p a{
+    color: var(--secondary-color);
+    text-decoration: none;
+}
