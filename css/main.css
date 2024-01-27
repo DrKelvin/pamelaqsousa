@@ -8,6 +8,9 @@
     --secondary-dark-color: #f190b0;
     --terciary-color: #5DB1C0;
     --quaternary-color: #CC0018;
+    --light-gray-color: #E0E0E0;
+    --dark-pinkgray-color: #96546a;
+    --dark-bluegray-color: #829ea2;
     --wp-color: #25D366;
     --wp-color-dark: #1fae54;
 }
@@ -18,7 +21,7 @@
     text-align: center;
     font-size: 2rem;
     font-weight: 700;
-    width: 95%;
+    width: 90%;
 }
 
 .divider{
@@ -35,6 +38,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding: 3rem 0 3rem 0;
 }
 
 .section2{
@@ -45,6 +49,7 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    padding: 3rem 0 3rem 0;
 }
 
 /* = CARD = */
@@ -150,13 +155,13 @@ header button{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: start;
     z-index: 9;
 }
 
 #btnCloseMenu nav .list{
-    height: 40%;
-    margin-top: 3rem;
+    width: 80%;
+    height: 60%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -195,22 +200,15 @@ header button{
 /* = PRESENTATION = */
 
 #presentation{
-    background-color: var(--light-color);
-    width: 100%;
-    height: calc(100% - 3.50rem);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
     margin-top: 3.50rem;
 }
 
 #div-img-perfil{
-    height: 18.75rem;
-    width: 18.75rem;
+    height: 18rem;
+    width: 18rem;
     border-radius: 50%;
     border: solid 4px var(--secondary-color); 
-    margin-bottom: 3rem;
+    margin-bottom: 4rem;
 }
 
 #div-img-perfil img{
@@ -224,21 +222,20 @@ header button{
 #presentation p{
     color: var(--main-color);
     width: 90%;
-    margin-bottom: 8rem;
 }
 
 #presentation p b{
     color: var(--secondary-color);
 }
 
-/* = ABOUT ME */
+/* = ABOUTME */
+
+#aboutme{
+    justify-content: center;
+}
 
 #aboutme .text{
     color: var(--light-color);
-}
-
-#aboutme .text:last-of-type{
-    margin-top: 4rem;
 }
 
 #aboutme .text b{
@@ -246,32 +243,46 @@ header button{
 }
 
 #aboutme .table{
-    margin-top: 3rem;
+    margin-top: 4rem;
     width: 80%;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
+#aboutme #call{
+    font-size: 1.6rem;
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
 #aboutme .table span{
-    width: 95%;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     border: 3px solid var(--terciary-color);
     border-radius: 1rem;
+    padding: 1rem;
 }
 
 #aboutme .table span .text{
+    width: 100%;
     color: var(--light-color);
     font-size: 1.5rem;
-    text-align: left;
+    text-align: center;
     margin: 0;
     padding: 1rem;
-    letter-spacing: 0.6rem;
+    letter-spacing: 0.3rem;
+    text-decoration: underline;
 }
 
-/* = ABOUT PARTNERS = */
+/* = ABOUTPARTNERS = */
+
+#aboutpartners{
+    justify-content: center;
+}
 
 #aboutpartners .text{
     color: var(--main-color);
@@ -286,35 +297,43 @@ header button{
     color: var(--secondary-color);
 }
 
-#aboutpartners .text span::after{
-    content: '';
-    width: 80%;
-    height: 4px;
-    background-color: var(--secondary-color);
-    position: absolute;
-    left: 0.2rem;
-    bottom: 0.2rem;
-}
-
 #aboutpartners .table{
     margin-top: 2rem;
-    height: 60%;
+    height: 70%;
     width: 90%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    gap: 5%;
+    max-width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#aboutpartners .table .column-left{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-around;
+}
+
+#aboutpartners .table .column-right{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-around;
 }
 
 /* = STICKER = */
 
 .sticker{
+    height: 30%;
     width: 100%;
-    height: 100%;
     padding: 0.4rem;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-direction: column;
     background-color: var(--main-color);
     border-radius: 0.8rem;
@@ -322,21 +341,31 @@ header button{
 }
 
 .sticker a{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
     text-align: center;
     text-decoration: none;
     color: var(--light-color);
+    font-size: .8rem;
 }
 
 .sticker a img{
     height: 80%;
-    width: 80%;
+    width: 90%;
+    max-height: 8rem;
+    max-width: 8rem;
     object-fit: cover;
+    object-position: center;
     border-radius: 0.8rem;
 }
 
-/* = ABOUTME = */
+/* = RANGE = */
 
-#aboutpublic{
+#range{
     background-color: var(--main-color);
     height: calc(100% - 3.50rem);
     width: 100%;
@@ -346,24 +375,24 @@ header button{
     flex-direction: column;
 }
 
-#aboutpublic p{
+#range p{
     color: var(--light-color);
 }
 
-#aboutpublic p b{
-    color: var(--secondary-color);
+#range p b{
+    color: var(--terciary-color);
 }
 
-#aboutpublic div p{
+#range div p{
     color: var(--light-color);
     font-size: 1.5rem;
 }
 
-#aboutpublic div p b{
+#range div p b{
     color: var(--terciary-color);
 }
 
-#aboutpublic .table{
+#range .table{
     width: 80%;
     height: 70%;
     display: flex;
@@ -372,15 +401,136 @@ header button{
     justify-content: space-around;
 }
 
-#aboutpublic .table .card p{
+#range .table .card p{
     z-index: 2;
     width: 80%;
+    text-align: center;
 }
 
-#aboutpublic .table .card img{
+#range .table .card img{
     height: 1.5rem;
     z-index: 2;
     margin-top: 1rem;
+}
+
+/* = ABOUTPUBLIC = */
+
+#aboutpublic{
+    justify-content: space-around;
+}
+
+#aboutpublic .text b{
+    color: var(--secondary-color);
+}
+
+#aboutpublic .text:nth-child(4){
+    font-size: 1.4rem;
+}
+
+#aboutpublic .cell{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
+    height: 6rem;
+    padding: .5rem;
+    border-radius: .8rem;
+}
+
+#aboutpublic .cell.cell-1{
+    border: solid 3px var(--terciary-color);
+}
+
+#aboutpublic .cell.cell-2{
+    border: solid 3px var(--secondary-color);
+}
+
+#aboutpublic .cell .text{
+    width: 100%; 
+    font-size: 1.3rem;
+}
+
+#aboutpublic .cell .percent-bar{
+    height: 70%;
+    width: 100%;
+    background-color: var(--light-gray-color);
+    border-radius: .8rem;
+}
+
+#aboutpublic .cell .percent-bar::after{
+    display: block;
+    content: '';
+    height: 100%;
+    border-radius: .8rem;
+    left: 0;
+    top: 0;
+    z-index: 2;
+}
+
+#aboutpublic .cell.cell-1 .percent-bar::after{
+    width: 86.8%;
+    background-color: var(--terciary-color);
+}
+
+#aboutpublic .cell.cell-2 .percent-bar::after{
+    width: 13.1%;
+    background-color: var(--secondary-color);
+}
+
+#aboutpublic .card{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 5%;
+    width: 70%;
+}
+
+#aboutpublic .card::before{
+    background-color: var(--light-color);
+}
+
+#aboutpublic .card .info{
+    z-index: 2;
+    width: 90%;
+    height: 16%;
+    position: relative;
+}
+
+#aboutpublic .card .info::after{
+    content: '';
+    display: block;
+    position: absolute;
+    height: 6px;
+    border-radius: .2rem;
+    left: 0;
+    bottom: 1rem;
+    background-color: #5DB1C0;
+    z-index: 3;
+}
+
+#aboutpublic .card .info.info-1::after{
+    width: 38.9%;
+}
+#aboutpublic .card .info.info-2::after{
+    width: 29.4%;
+}
+#aboutpublic .card .info.info-3::after{
+    width: 17.3%;
+}
+#aboutpublic .card .info.info-4::after{
+    width: 7.9%;
+}
+#aboutpublic .card .info.info-5::after{
+    width: 6.5%;
+}
+
+#aboutpublic .card .info span{
+    color: var(--main-color);
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    
 }
 
 /* = CONTACTS = */
@@ -427,7 +577,6 @@ header button{
     cursor: pointer;
     background-color: var(--wp-color);
     transition: .3s;
-    margin-top: 3rem;
 }
 
 #contacts a:hover{
@@ -453,4 +602,79 @@ footer p{
 footer p a{
     color: var(--secondary-color);
     text-decoration: none;
+}
+
+/* = Media Queries = */
+
+@media screen and (max-width: 410px) {
+    
+    /* = CLASSES = */
+    
+    .text{
+        font-size: 1.6rem;
+    }
+
+    .section1{
+        padding: 2rem 0 2rem 0;
+    }
+
+    .section2{
+        padding: 2rem 0 2rem 0;
+    }
+
+    /* = ABOUT ME = */
+
+    #aboutme .table{
+        margin-top: 1rem;
+    }
+
+    /* = ABOUTPARTNERS = */
+
+    /* = STICKER = */
+
+    .sticker a{
+        font-size: .7rem;
+    }
+
+    /* = RANGE - */
+
+    #range .table .card img{
+        margin-top: 0;
+    }
+
+    #range .table .card p{
+        z-index: 2;
+        width: 80%;
+        text-align: center;
+        font-size: 1.2rem;
+    }
+
+    /* = ABOUTPUBLIC = */
+
+    #aboutpublic .cell .text{
+        font-size: 1.2rem;
+    }
+
+    #aboutpublic .card .info::after{
+        bottom: 0;
+    }
+
+    /* = CONTACTS = */
+
+    #contacts a{
+        font-size: 1.4rem;
+    }
+}
+
+@media screen and (max-height: 900px) {
+    #btnCloseMenu nav .list{
+        margin-top: 3.5rem;
+    }
+}
+
+
+@media screen and (max-height: 690px) {
+    #btnCloseMenu nav .list{
+        margin-top: 7rem;
+    }
 }
