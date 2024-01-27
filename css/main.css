@@ -474,7 +474,7 @@ header button{
 }
 
 #aboutpublic .cell.cell-2 .percent-bar::after{
-    width: 13.1%;
+    width: 33.1%;
     background-color: var(--secondary-color);
 }
 
