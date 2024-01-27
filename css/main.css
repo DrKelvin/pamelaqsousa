@@ -606,6 +606,15 @@ footer p a{
 
 /* = Media Queries = */
 
+@media screen and (max-width: 500px) {
+    
+    /* = ABOUTPUBLIC = */
+
+    #aboutpublic .card .info::after{
+        bottom: 0;
+    }
+}
+
 @media screen and (max-width: 410px) {
     
     /* = CLASSES = */
